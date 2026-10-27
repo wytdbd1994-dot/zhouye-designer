@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周也 ZHOU YE — 简历 RÉSUMÉ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f4f0;--ink:#0c0c0b;--muted:#7c7a72;--line:#d8d5cc;
+  --panel:#edeae3;--green:#3f9e66;
+  --sans:"Instrument Sans","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:#dedbd2;color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.55}
+::selection{background:var(--ink);color:#fff}
+
+.toolbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  gap:16px;flex-wrap:wrap;background:var(--ink);color:#fff;padding:14px clamp(16px,3vw,40px)}
+.toolbar b{font-size:14px;letter-spacing:.18em}
+.toolbar b i{font-style:normal;color:#5ec08a}
+.acts{display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 20px;
+  font-size:13px;font-weight:700;border:1.5px solid rgba(255,255,255,.35);color:#fff;transition:.25s}
+.btn:hover{border-color:#fff}
+.btn.primary{background:#5ec08a;border-color:#5ec08a;color:var(--ink)}
+.btn.primary:hover{background:#76d09d}
+
+.sheet{width:210mm;min-height:297mm;margin:24px auto;background:var(--paper);
+  padding:16mm 15mm;box-shadow:0 10px 44px rgba(0,0,0,.18);border-radius:6px}
+.sheet+.sheet{margin-top:24px}
+
+.r-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
+  border-bottom:3px solid var(--ink);padding-bottom:18px}
+.r-name{font-size:52px;font-weight:700;line-height:1;letter-spacing:-.01em}
+.r-name em{font-style:normal;position:relative}
+.r-name em::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:10px;background:rgba(94,192,138,.35);z-index:-1}
+.r-role{margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.22em;color:var(--muted)}
+.r-contact{text-align:right;font-size:11px;font-weight:500;line-height:2}
+.r-contact b{font-weight:700}
+
+.r-sec{margin-top:24px}
+.r-title{display:flex;align-items:center;gap:12px;margin-bottom:13px;font-size:14.5px;font-weight:700;letter-spacing:.16em}
+.r-title::after{content:"";flex:1;height:1.5px;background:var(--ink)}
+.r-title .n{width:22px;height:22px;border-radius:7px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:11px}
+.r-summary{font-size:12px;line-height:2;color:#36342e}
+.r-summary em{font-style:normal;font-weight:700}
+
+.r-item{display:grid;grid-template-columns:25mm 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.r-item:last-child{border-bottom:0}
+.r-when{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--green);padding-top:3px}
+.r-body h4{font-size:13.5px;font-weight:700}
+.r-body h4 small{font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--muted);margin-left:8px}
+.r-body p{font-size:11px;line-height:1.9;color:#4a4842;margin-top:4px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.r-list{font-size:11px;line-height:2.1;color:#36342e}
+.r-list b{color:var(--green);font-weight:700;margin-right:8px}
+.r-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.r-tags span{border:1.3px solid var(--ink);border-radius:999px;padding:4px 12px;font-size:10px;font-weight:700}
+
+.r-foot{margin-top:26px;border-top:3px solid var(--ink);padding-top:12px;
+  display:flex;justify-content:space-between;font-size:9.5px;font-weight:600;letter-spacing:.18em;color:var(--muted)}
+
+@media (max-width:860px){
+  .sheet{width:100%;min-height:auto;padding:32px 22px;margin:0;border-radius:0}
+  .r-head{flex-direction:column}.r-contact{text-align:left}
+  .two{grid-template-columns:1fr}.r-item{grid-template-columns:1fr;gap:4px}
+}
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff}
+  .toolbar{display:none}
+  .sheet{margin:0;box-shadow:none;border-radius:0;width:210mm;min-height:297mm;page-break-after:always}
+  .sheet:last-child{page-break-after:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <b>周也 ZHOU YE <i>●</i> 数字产品设计师 — 简历 RÉSUMÉ</b>
+  <div class="acts">
+    <a class="btn" href="index.html">← 返回网站</a>
+    <button class="btn primary" onclick="window.print()">打印 / 保存为 PDF ↓</button>
+  </div>
+</div>
+
+<!-- 第 1 页 -->
+<div class="sheet">
+  <header class="r-head">
+    <div>
+      <h1 class="r-name">周<em>也</em></h1>
+      <p class="r-role">数字产品设计师 / 设计总监 · PRODUCT DESIGNER / DESIGN DIRECTOR</p>
+    </div>
+    <div class="r-contact">
+      <b>hello@zhouye.design</b><br>
+      +86 139 0000 0000 · 上海<br>
+      即刻 / 站酷 / Behance：<span style="white-space:nowrap">@周也</span><br>
+      zhouye.design
+    </div>
+  </header>
+
+  <section class="r-sec">
+    <h2 class="r-title"><span class="n">1</span>个人简介 PROFILE</h2>
+    <p class="r-summary">9 年互联网产品设计经验，<em>一人团队，没有交接</em>。专注数字产品、设计系统与 AI 体验设计，主导 42 款上线产品，累计触达 1.2 亿月活用户。曾任头部互联网集团设计系统负责人，现为独立设计师 / 设计合伙人。擅长用「克制」的设计解决复杂的业务问题，也擅长在工程师与老板之间画那张能说服所有人的草图。</p>
+  </section>
+
+  <section class="r-sec">
+    <h2 class="r-title"><span class="n">2</span>工作经历 EXPERIENCE</h2>
+    <div class="r-item">
+      <span class="r-when">2023 — 至今</span>
+      <div class="r-body">
+        <h4>独立数字产品设计师<small>SHANGHAI · FREELANCE / PARTNER</small></h4>
+        <p>每年只接 4–6 个项目，覆盖从 0 到 1 创业产品与大厂体验重构。代表项目：潮汐 AI 助手、云岚航旅重构。</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2020 — 2023</span>
+      <div class="r-body">
+        <h4>某头部互联网集团 · 设计系统负责人<small>DESIGN SYSTEM LEAD</small></h4>
+        <p>主持「像素 PI」设计系统：三层 Token、214 个组件，服务 300+ 设计师与 1200+ 工程师；交付周期从 11 天缩短至 3 天。</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2017 — 2020</span>
+      <div class="r-body">
+        <h4>腾讯 · 高级产品设计师<small>SENIOR PRODUCT DESIGNER</small></h4>
+        <p>负责多个亿级用户产品的核心链路改版，两次获公司年度设计奖；开始系统研究动效与交互细节。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="r-sec">
+    <h2 class="r-title"><span class="n">3</span>精选项目 SELECTED WORK</h2>
+    <div class="r-item">
+      <span class="r-when">2026</span>
+      <div class="r-body">
+        <h4>潮汐 TIDE — AI 原生效率助手<small>产品设计合伙人</small></h4>
+        <p>从命名、品牌到全部界面的完整设计；上线 100 天 80 万用户，App Store 效率榜最高第 4，评分 4.8。</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2025</span>
+      <div class="r-body">
+        <h4>云岚 Cloudrift — 航旅平台体验重构<small>外部顾问 / 主设计</small></h4>
+        <p>关键路径 14 步压缩至 5 步，核心转化率 +23%，NPS 38 → 61。</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2023</span>
+      <div class="r-body">
+        <h4>霓虹折 Neon Fold — 潮流电商品牌与小程序<small>品牌 + 产品全案</small></h4>
+        <p>开业首月 GMV 3000 万，次月复购 52%；视觉收录于《Design 360°》。</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- 第 2 页 -->
+<div class="sheet">
+  <section class="r-sec" style="margin-top:0">
+    <h2 class="r-title"><span class="n">4</span>核心能力 CAPABILITIES</h2>
+    <div class="two">
+      <p class="r-list">
+        <b>01</b>数字产品设计（App / Web / 小程序）<br>
+        <b>02</b>设计系统与 Design Token<br>
+        <b>03</b>AI 体验设计（对话 / 多模态）<br>
+        <b>04</b>用户研究与服务设计
+      </p>
+      <p class="r-list">
+        <b>05</b>动效与高保真原型<br>
+        <b>06</b>品牌识别与字体排印<br>
+        <b>07</b>数据可视化 / WebGL 创意编程<br>
+        <b>08</b>设计团队管理与工作坊
+      </p>
+    </div>
+    <div class="r-tags">
+      <span>Figma</span><span>Framer</span><span>After Effects</span><span>Principle</span>
+      <span>Rive</span><span>Webflow</span><span>HTML/CSS</span><span>React</span>
+      <span>three.js</span><span>Spline</span><span>设计系统</span><span>AI 工作流</span>
+    </div>
+  </section>
+
+  <section class="r-sec">
+    <h2 class="r-title"><span class="n">5</span>奖项与认可 AWARDS</h2>
+    <div class="r-item">
+      <span class="r-when">2022</span>
+      <div class="r-body"><h4>App Store 年度精选 · 小米设计奖金奖<small>静域 Quiet</small></h4></div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2021</span>
+      <div class="r-body"><h4>Awwwards Site of the Day<small>城市脉搏数据平台</small></h4></div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2020</span>
+      <div class="r-body"><h4>站酷 ZCOOL 年度十大设计师</h4></div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">2019</span>
+      <div class="r-body"><h4>Red Dot 红点设计奖 · IF 设计奖</h4></div>
+    </div>
+  </section>
+
+  <section class="r-sec">
+    <h2 class="r-title"><span class="n">6</span>教育与其他 EDUCATION</h2>
+    <div class="r-item">
+      <span class="r-when">2013 — 2017</span>
+      <div class="r-body">
+        <h4>同济大学 · 交互设计 学士<small>SHANGHAI</small></h4>
+        <p>毕业设计获学院金奖；2024 年起任设计创意学院校外导师。</p>
+      </div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">语言</span>
+      <div class="r-body"><h4>中文（母语） · 英语（流利，可作为工作语言）</h4></div>
+    </div>
+    <div class="r-item">
+      <span class="r-when">写作</span>
+      <div class="r-body"><h4>公众号 / 即刻「周也的设计笔记」· 12 万订阅</h4></div>
+    </div>
+  </section>
+
+  <div class="r-foot">
+    <span>ZHOU YE — RÉSUMÉ 2026</span>
+    <span>HELLO@ZHOUYE.DESIGN</span>
+    <span>02 / 02</span>
+  </div>
+</div>
+
+</body>
+</html>
